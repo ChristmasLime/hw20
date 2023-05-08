@@ -19,7 +19,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeServiceImpl() {
         this.employeeList = new ArrayList<>(MAX_SIZE);
     }
-
     @Override
     public Employee add(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
@@ -32,7 +31,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeList.add(employee);
         return employee;
     }
-
     @Override
     public Employee remove(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
@@ -42,7 +40,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         throw new EmployeeNotFoundException();
     }
-
     @Override
     public Employee find(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
@@ -51,7 +48,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         throw new EmployeeNotFoundException();
     }
-
     @Override
     public Collection<Employee> getAll() {
         return Collections.unmodifiableList(employeeList);
